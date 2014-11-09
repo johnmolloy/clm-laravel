@@ -14,10 +14,10 @@ class DatabaseSeeder extends Seeder {
 		// $this->call('UserTableSeeder');
         $this->call('AdvertisersTableSeeder');
         $this->call('ManufacturersTableSeeder');
-        //$this->call('ModelsTableSeeder');
-        //$this->call('DealsTableSeeder');
+        $this->call('ModelsTableSeeder');
+        $this->call('DealsTableSeeder');
+        $this->call('InvoicesTableSeeder');
         //$this->call('DerivativesTableSeeder');
-        //$this->call('InvoicesTableSeeder');
 	}
 
 }

@@ -15,23 +15,24 @@ class CreateDealsTable extends Migration {
         Schema::create('deals', function(Blueprint $table)
         {
             //
-            $table->increments('dealid');
-            $table->tinyInteger('manufacturerid');
-            $table->tinyInteger('modelid');
+            $table->bigIncrements('dealid');
+            $table->bigInteger('advertiserid');
+            $table->integer('manufacturerid');
+            $table->bigInteger('modelid');
             $table->string('manufacturername');
             $table->string('modelname');
             $table->string('derivativename');
             $table->string('profile');
-            $table->tinyInteger('initialrental');
+            $table->bigInteger('initialrental');
             $table->tinyInteger('contractLength');
-            $table->tinyInteger('mileage');
+            $table->bigInteger('mileage');
             $table->tinyInteger('maintenance');
             $table->tinyInteger('personal');
             $table->tinyInteger('leadtime');
-            $table->integer('dealprice');
+            $table->bigInteger('dealprice');
             $table->string('dealurl');
             $table->string('dealDescription');
-            $table->integer('views');
+            $table->bigInteger('views');
             $table->timestamps();
         });
 	}

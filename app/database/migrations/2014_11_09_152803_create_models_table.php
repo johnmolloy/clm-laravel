@@ -16,8 +16,8 @@ class CreateModelsTable extends Migration {
         Schema::create('models', function(Blueprint $table)
         {
             //
-            $table->increments('modelid');
-            $table->tinyInteger('manufacturerid');
+            $table->bigIncrements('modelid');
+            $table->integer('manufacturerid');
             $table->string('modelname')->unique;
             $table->text('description');
             $table->string('website');

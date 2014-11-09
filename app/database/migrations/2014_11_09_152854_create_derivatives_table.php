@@ -16,10 +16,10 @@ class CreateDerivativesTable extends Migration {
         Schema::create('derivatives', function(Blueprint $table)
         {
             //
-            $table->increments('derivativerid');
+            $table->bigIncrements('derivativerid');
             $table->string('derivativename')->unique;
-            $table->tinyInteger('manufacturerid');
-            $table->tinyInteger('modelid');
+            $table->integer('manufacturerid');
+            $table->bigInteger('modelid');
             $table->string('manufacturername');
             $table->string('modelname');
             $table->text('description');

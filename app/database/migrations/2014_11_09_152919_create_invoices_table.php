@@ -16,10 +16,11 @@ class CreateInvoicesTable extends Migration {
         Schema::create('invoices', function(Blueprint $table)
         {
             //
-            $table->increments('invoiceid');
-            $table->tinyInteger('advertiserid');
-            $table->integer('total');
+            $table->bigIncrements('invoiceid');
+            $table->bigInteger('advertiserid');
+            $table->bigInteger('total');
             $table->enum('status', array('paid', 'unpaid', 'overdue', 'default'));
+            $table->timestamps();
         });
 	}
 
