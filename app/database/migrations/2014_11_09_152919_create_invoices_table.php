@@ -16,7 +16,7 @@ class CreateInvoicesTable extends Migration {
         Schema::create('invoices', function(Blueprint $table)
         {
             //
-            $table->bigIncrements('invoiceid');
+            $table->bigIncrements('id');
             $table->bigInteger('advertiserid');
             $table->bigInteger('total');
             $table->enum('status', array('paid', 'unpaid', 'overdue', 'default'));

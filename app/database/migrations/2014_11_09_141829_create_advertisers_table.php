@@ -15,7 +15,7 @@ class CreateAdvertisersTable extends Migration {
 		Schema::create('advertisers', function(Blueprint $table)
 		{
 			//
-            $table->bigIncrements('advertiserid');
+            $table->bigIncrements('id');
             $table->string('advertisername')->unique;
             $table->string('secret');
             $table->text('description');

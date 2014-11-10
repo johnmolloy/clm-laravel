@@ -15,7 +15,7 @@ class CreateDealsTable extends Migration {
         Schema::create('deals', function(Blueprint $table)
         {
             //
-            $table->bigIncrements('dealid');
+            $table->bigIncrements('id');
             $table->bigInteger('advertiserid');
             $table->integer('manufacturerid');
             $table->bigInteger('modelid');

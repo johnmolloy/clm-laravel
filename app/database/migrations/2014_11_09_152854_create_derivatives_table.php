@@ -16,7 +16,7 @@ class CreateDerivativesTable extends Migration {
         Schema::create('derivatives', function(Blueprint $table)
         {
             //
-            $table->bigIncrements('derivativerid');
+            $table->bigIncrements('id');
             $table->string('derivativename')->unique;
             $table->integer('manufacturerid');
             $table->bigInteger('modelid');

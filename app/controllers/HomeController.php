@@ -15,9 +15,10 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function home()
 	{
-		return View::make('hello');
+        echo $advertiser = Advertiser::find(1)->advertisername;
+        return View::make('home');
 	}
 
 }
